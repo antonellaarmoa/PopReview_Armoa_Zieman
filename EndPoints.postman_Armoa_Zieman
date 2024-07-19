@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "1d295351-fc1d-4f5d-8c90-f40d9613e495",
+		"name": "EndPoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36456734",
+		"_collection_link": "https://tpo-api-9923.postman.co/workspace/TPO-API~d7686b4b-903f-46cb-846d-e921cda349b6/collection/36456734-1d295351-fc1d-4f5d-8c90-f40d9613e495?action=share&source=collection_link&creator=36456734"
+	},
+	"item": [
+		{
+			"name": "Add movie to favorites",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/favorites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add movie to watched",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/favorites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add movie to watchlist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/watchlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"watchlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar película a una lista específica del usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verificar las credenciales de usuario y permitir el acceso Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener las peliculas de una lista de un usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/user/:userId/movies/:listType",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"user",
+						":userId",
+						"movies",
+						":listType"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "listType",
+							"value": "watched",
+							"description": "En este ejemplo usamos watched pero puede ser cualquiera de las 3 (watched, watchlist y favorites)"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove movie from watchlist",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/user/6/watchlist/573435",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"user",
+						"6",
+						"watchlist",
+						"573435"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove movie from watched",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/user/6/watchlist/573435",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"user",
+						"6",
+						"watchlist",
+						"573435"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove movie from favorites",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/user/:userId/favorites/:movieId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"user",
+						":userId",
+						"favorites",
+						":movieId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": ""
+						},
+						{
+							"key": "movieId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
